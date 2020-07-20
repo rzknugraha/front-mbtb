@@ -21,7 +21,10 @@ Route::get('/', 'HomeController@landing');
 Route::get('/home', 'HomeController@home');
 Route::post('/subscribe', 'HomeController@emailSubscribe');
 
+Route::get('/story', 'PostController@story');
 Route::get('/story/{id?}', 'PostController@storyDetail');
+
+Route::get('/event', 'PostController@event');
 
 Route::get('/link', function () {
     Artisan::call('storage:link');

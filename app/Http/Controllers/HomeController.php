@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\EmailSubscribe;
 use App\Post;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -38,10 +38,9 @@ class HomeController extends Controller
 
             'email' => 'required|email:rfc,dns|unique:email_subscribe',
 
-
         ]);
 
-        $es=  new EmailSubscribe;
+        $es = new EmailSubscribe;
 
         $es->email = $request->email;
         $es->status = 1;
@@ -54,9 +53,9 @@ class HomeController extends Controller
 
     public function home()
     {
-        $getStory = Post::where('category',3)->get();
-        $getEvent = Post::where('category',4)->get();
+        $getStory = Post::where('category', 3)->get();
+        $getEvent = Post::where('category', 4)->get();
 
-        return view('home.home',compact('getEvent','getStory'));
+        return view('home.home', compact('getEvent', 'getStory'));
     }
 }

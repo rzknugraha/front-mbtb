@@ -1,0 +1,77 @@
+/* Event style */
+.main-events {
+  background-color: #FD549F;
+  height: 540px;
+  padding-top: 170px;
+}
+
+.events-tag {
+  color: #12305B;
+  margin-bottom: 1.5rem;
+}
+
+.events-tag span {
+  font-family: "Montserrat Medium", sans-serif;
+  text-transform: capitalize;
+}
+
+.events-theme {
+  color: #12305B;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.events-title {
+  letter-spacing: 3px;
+  color: #12305B;
+  text-transform: capitalize;
+  font-family: "Montserrat Medium";
+  margin-bottom: 1rem;
+}
+
+.events-title span {
+  text-transform: lowercase;
+  font-family: "Montserrat Medium";
+}
+
+.events-detail {
+  text-transform: capitalize;
+  color: #12305B;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+}
+
+.events-person {
+  position: relative;
+}
+
+.events-person > img {
+  width: 500px;
+  height: 500px;
+  bottom: 20px;
+  right: 70px;
+  position: relative;
+}
+
+.events-person-box {
+  position: absolute;
+  z-index: 1;
+  background: #12305B;
+  padding: 1rem;
+  bottom: 75px;
+  left: -47px;
+}
+
+.events-person-name,
+.events-person-job {
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: #FD549F;
+}
+
+.section-all-events {
+  background: #12305B;
+  padding: 80px 0;
+}
+/* Event style */

@@ -2,6 +2,27 @@
 
 @section('content')
 
+<header class="header-dark">
+    <div class="container">
+      <div>
+        <nav>
+          <a href="/home">
+            Home
+          </a>
+          <a href="/story">
+              Stories
+            </a>
+            <a href="/event">
+            Events
+          </a>
+        </nav>
+        <a href="#modal-login" id="btn-login" class="modal-trigger">
+          Login
+        </a>
+      </div>
+    </div>
+  </header>
+
     <section class="first">
         <div class="gradient-layer"></div>
         <div class="container">
@@ -15,23 +36,24 @@
         </div>
       </section>
 
-      <section class="second">
+      <section class="third">
         <div class="container">
           <div>
-            <div class="left">
-              <h2>Be Brave <br />Be Free</h2>
-              <h3>#bebastanpabatas</h3>
-              <div class="desc">
-                <p>
-                  We encourage people to step out the boundaries to achieve
-                  dreams. Everyone have unique story, we belive yours too. Share
-                  your story to inspire others.
-                </p>
-                <a href="#">Submit Your Story ></a>
-              </div>
-            </div>
+            <br>
+          <h2 style="color:black">{{$detailStory->short_description}}</h2>
+                <h4>{{$detailStory->title}}</h4>
 
-            <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            </div>
+            <div class="post-body">
+                {!!$detailStory->body!!}
+            </div>
+            <div>
+                <table>
+                    <tr>
+
+                    </tr>
+                </table>
+            </div>
           </div>
         </div>
       </section>
@@ -71,67 +93,6 @@
             </div>
 
             <a href="#" class="btn-tosca">See All Stories</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="fourth">
-        <!-- <div class="container">
-          <div></div>
-        </div> -->
-        <a href="#" class="banner">
-          <img src="/assets/images/Next_Event_Foom Talks.png" />
-        </a>
-      </section>
-
-      <section class="slider-section fifth">
-        <div class="container">
-          <div>
-            <h2>Foomunity Events</h2>
-            <div class="slider-wrapper">
-              <img
-                class="prev"
-                src="/assets/images/button_left-green.png"
-                onclick="onSlide(1, 0)"
-              />
-              <img
-                class="next"
-                src="/assets/images/button_right-green.png"
-                onclick="onSlide(1, 1)"
-              />
-
-              <div class="slider-content">
-                  @foreach ($getEvent as $gE)
-              <div class="slider-item slider-{{$loop->iteration}}">
-                  <img src="{{env('IMAGE_URL').$gE->image_front}}" />
-                  <a href="#">
-                    <div class="text">
-                      <h4>
-                        {{$gE->title}}
-                      </h4>
-                      <span>Read More ></span>
-                    </div>
-                  </a>
-                </div>
-                @endforeach
-              </div>
-            </div>
-
-            <a href="#" class="btn-tosca">See All Events</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="sixth">
-        <div class="gradient-layer"></div>
-        <div class="container">
-          <div>
-            <h1>Are You Ready<br />To Join Foomunity?</h1>
-            <div>
-              <a href="#" class="btn-tosca">
-                Sign Me Up
-              </a>
-            </div>
           </div>
         </div>
       </section>
